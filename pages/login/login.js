@@ -1,0 +1,60 @@
+var app = new Vue({
+        el:"#loginBox",
+        data:{
+            userId:"",
+			password:"",
+            note:"",
+            loginMethod:0,
+            pwType:true,
+            nType:false,
+            aType:false,
+            isChecked:false,
+            isPasswdHide:true,
+            checkImgSrc:"weigouxuan.png",
+            hideImgSrc:"icon-test.png",
+        },
+        methods:{
+            choicePasswdLogin:function () {
+                console.log("进入密码登录");
+                this.loginMethod = 0;
+                this.pwType = true;
+                this.nType = false;
+                this.aType = false;
+            },
+            choiceNoteLogin:function () {
+                console.log("进入短信登录");
+                this.loginMethod = 1;
+                this.pwType = false;
+                this.nType = true;
+                this.aType = false;
+            },
+            choiceAdminLogin:function () {
+                console.log("进入管理员登录");
+                this.loginMethod = 2;
+                this.pwType = false;
+                this.nType = false;
+                this.aType = true;
+            },
+            addBtmBorder:function () {
+              if (this.loginMethod == 1){
+                  return
+              }
+            },
+            doCheck:function () {
+                this.isChecked = !this.isChecked;
+                if (this.isChecked == true){
+                    this.checkImgSrc = "xuanzhong.png";
+                } else {
+                    this.checkImgSrc = "weigouxuan.png";
+                }
+            },
+            doHide:function () {
+                this.isPasswdHide = !this.isPasswdHide;
+                if (this.isPasswdHide == true){
+                    this.hideImgSrc = "icon-test.png";
+                } else {
+                    this.hideImgSrc = "icon-test-3.png";
+                }
+            },
+        }
+    })
