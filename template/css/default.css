@@ -6,19 +6,18 @@ a{
 }
 
 /* background-color */
-.button-green{
+.green{
 	background-color: #36C384;
 }
-.back-grey{
+.grey{
 	background-color: #F7F9F8;
 }
 .line-grey{
 	border-bottom: #e9eaeb;
 }
-.line-font{
-	color: #3B3C3E;
+.white{
+	background-color: white;
 }
-
 /* header ------------------------------------------------- */
 .header{/* 头部标签设置 */
 	font-size: 1.125rem;
@@ -28,12 +27,14 @@ a{
 	line-height: 4rem;
 	width: 102%;/* 为了连贯边框 */
 	border: 1px #3b3c3e solid;
-	color: #FFFFFF;
+	color: #F7F9F8;
 	box-shadow: 0 0.05rem 1rem grey;
+
 }
 .header a{
-	color: #FFFFFF;
+	color: #F7F9F8;
 	text-decoration:none;
+
 }
 /* logo */
 .header .logo{/* 在heaer里面的logo位置 */
@@ -86,6 +87,7 @@ a{
 .header .bar{
 	float: left;
 	margin: 0 3rem;
+	font-weight: 600;
 }
 
 /* header ------------------------------------------------- */
