@@ -1,0 +1,152 @@
+*,body{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: gray;
+}
+input,button{
+	outline:none;
+}
+#loginBox{
+    margin: 0 auto;
+    width: 400px;
+    height: 500px;
+    text-align: center;
+    background: white;
+    margin-top: 200px;
+	border-radius: 10px;
+}
+#logoImg{
+    font-size: 25px;
+    height: 100px;
+    line-height: 100px;
+	text-align: center;
+}
+#logoImg #cancel{
+	float: right;
+	width: 50px;
+	height: 50px;
+	font-size: 30px;
+    line-height: 30px;
+	color: #e3e3e3;
+}
+#logoImg img{
+	width: 150px;
+	margin-left: 50px;
+}
+/*#loginType div{*/
+/*    background: white;*/
+/*    !*border: 0px;*!*/
+/*    font-size: 20px;*/
+/*    float: left;*/
+/*    margin-left: 20px;*/
+/*    color: gray;*/
+/*}*/
+.loginTypeBtnT{
+	background: white;
+	border: 0;
+	font-size: 20px;
+	float: left;
+	margin-left: 20px;
+	color: gray;
+}
+.loginTypeBtnF{
+	border-bottom: 2px solid;
+	border-top: 0;
+	border-left: 0;
+	border-right: 0;
+	color: #3b3c3e;
+	background: white;
+	font-size: 20px;
+	float: left;
+	margin-left: 20px;
+}
+#loginType{
+    height: 60px;
+	margin-left: 10px;
+}
+.inputBox{
+	height: 94px;
+}
+.inputNum{
+    background: #f4f4f4;
+    height: 60px;
+    line-height: 60px;
+    margin-left: 30px;
+    margin-right: 30px;
+	border-radius: 7px;
+}
+.inputNum input{
+    margin-left: 20px;
+    height: 40px;
+    float: left;
+    background: #f4f4f4;
+    border: 0px;
+    line-height: 30px;
+    margin-top: 10px;
+	width: 200px;
+}
+.inputNum button{
+    background: #f4f4f4;
+    border:0px;
+    color: #36c384;
+    float: right;
+	width: 87px;
+	height: 60px;
+	border-radius: 7px;
+}
+.tips{
+	display: none;
+	font-size: 15px;
+	color: #e70000;
+	text-align: left;
+	margin-left: 30px;
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+.loginBtn{
+	width: 300px;
+	height: 60px;
+    margin-left: 30px;
+    line-height: 30px;
+	margin-bottom: 50px;
+}
+.loginBtn button{
+	background: #36c384;
+	color: white;
+	border: 0px;
+	width: 340px;
+	height: 60px;
+    line-height: 30px;
+	border-radius: 7px;
+	margin-top: 5px;
+}
+#bottomBox{
+	width: 340px;
+	height: 60px;
+	margin-left: 25px;
+}
+#bottomBox input{
+	background-color: #36C384;
+	color: #36C384;
+	background: #36C384;
+	border: 0px;
+}
+#autoLogin{
+	float: left;
+	width: 130px;
+}
+.autoLoginCheckBox{
+
+}
+#forgetOrRegister{
+	float: right;
+	text-align: right;
+	width: 130px;
+	color: #999999;
+}
+a{
+	text-decoration:none;
+	color: #999999;
+}
