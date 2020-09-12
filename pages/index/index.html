@@ -5,9 +5,11 @@
 		<title>软工平台</title>
 		<link rel="stylesheet" type="text/css" href="index.css" />
 		<link rel="stylesheet" type="text/css" href="../../template/css/default.css" />
+		<link rel="stylesheet" type="text/css" href="../../pages/index/login.css" />
 		<!--<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>-->
 	</head>
 	<body>
+	<div id="index">
 		<div class="header">
 			<!-- logo图片在这里设置 -->
 			<a href="../index/index.html">
@@ -21,7 +23,7 @@
 			<div class="bar"><a href="">关于我们</a></div>
 			<div class="login">
 				<!-- 登录页面跳转点击这里 -->
-				<a class="login-in" href="../login/login.html">
+				<a class="login-in" href="#" @click="doHideLogin()">
 					登录
 				</a>
 				<div class="blank">
@@ -42,5 +44,89 @@
 				欢迎来到软工平台
 			</div>
 		</div>
+		<!--		######################## 登录弹框 ###########################################-->
+		<div id="mask" v-if="isHideLogin==1" @click="doHideLogin()"></div>
+		<div id="login" v-if="isHideLogin==1">
+			<div id="loginBox">
+				<div id="logoImg">
+					<div id="cancel"><a href="javascript:void(0)">×</a></div>
+					<img src="../../assets/image/软工平台.png" />
+				</div>
+				<div id="loginType">
+					<button @click="choicePasswdLogin()" :class="pwType?'loginTypeBtnF':'loginTypeBtnT'"><b>密码登录</b></button>
+					<button @click="choiceNoteLogin()" :class="nType?'loginTypeBtnF':'loginTypeBtnT'"><b>短信登陆</b></button>
+					<button @click="choiceAdminLogin()" :class="aType?'loginTypeBtnF':'loginTypeBtnT'"><b>管理员登陆</b></button>
+				</div>
+				<div id="passwdLogin" v-if="loginMethod==0">
+					<div class="inputBox">
+						<div class="inputNum">
+							<input type="text" placeholder="手机号" v-model="userId">
+						</div>
+						<div class="tips">请输入正确的手机号</div>
+					</div>
+					<div class="inputBox">
+						<div class="inputNum">
+							<input placeholder="请输入密码" :type="isPasswdHide==true?'password':'text'">
+							<button>
+								<img @click="doHide()" :src="hideImgSrc" class="hidePasswdBox" width="30px" height="30px">
+							</button>
+						</div>
+						<div class="tips">密码错误</div>
+					</div>
+					<div class="loginBtn">
+						<button>登录</button>
+					</div>
+				</div>
+				<div id="noteLogin" v-if="loginMethod==1">
+					<div class="inputBox">
+						<div class="inputNum">
+							<input type="text" placeholder="手机号" v-model="userId">
+						</div>
+						<div class="tips" id="tips1">请输入正确的手机号</div>
+					</div>
+					<div class="inputBox">
+						<div class="inputNum">
+							<input type="text" placeholder="请输入手机验证码">
+							<button>获取验证码</button>
+						</div>
+						<div class="tips" id="tips2">验证码错误</div>
+					</div>
+					<div class="loginBtn">
+						<button>登录</button>
+					</div>
+				</div>
+				<div id="adminLogin" v-if="loginMethod==2"><div class="inputBox">
+					<div class="inputNum">
+						<input type="text" placeholder="手机号" v-model="userId">
+					</div>
+					<div class="tips">请输入正确的手机号</div>
+				</div>
+					<div class="inputBox">
+						<div class="inputNum">
+							<input placeholder="请输入密码" :type="isPasswdHide==true?'password':'text'">
+							<button>
+								<img @click="doHide()" :src="hideImgSrc" class="hidePasswdBox" width="30px" height="30px">
+							</button>
+						</div>
+						<div class="tips">密码错误</div>
+					</div>
+					<div class="loginBtn">
+						<button>登录</button>
+					</div>
+				</div>
+				<div id="bottomBox">
+					<div id="autoLogin">
+						<img @click="doCheck()" :src="checkImgSrc" class="autoLoginCheckBox" width="16px" height="16px">
+						下次自动登录
+					</div>
+					<div id="forgetOrRegister"><a href="javascript:void(0)">忘记密码</a>&nbsp;|&nbsp;<a href="javascript:void(0)">注册</a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+		<!--		######################## 登录弹框 ###########################################-->
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<!--		<script type="text/javascript" src="../../pages/login/login.js"></script>-->
+		<script type="text/javascript" src="../../pages/index/index.js"></script>
 	</body>
 </html>

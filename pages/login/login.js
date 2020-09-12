@@ -10,8 +10,8 @@ var app = new Vue({
             aType:false,
             isChecked:false,
             isPasswdHide:true,
-            checkImgSrc:"weigouxuan.png",
-            hideImgSrc:"icon-test.png",
+            checkImgSrc:"../../assets/image/weigouxuan.png",
+            hideImgSrc:"../../assets/image/icon-test.png",
         },
         methods:{
             choicePasswdLogin:function () {
@@ -43,17 +43,17 @@ var app = new Vue({
             doCheck:function () {
                 this.isChecked = !this.isChecked;
                 if (this.isChecked == true){
-                    this.checkImgSrc = "xuanzhong.png";
+                    this.checkImgSrc = "../../assets/image/xuanzhong.png";
                 } else {
-                    this.checkImgSrc = "weigouxuan.png";
+                    this.checkImgSrc = "../../assets/image/weigouxuan.png";
                 }
             },
             doHide:function () {
                 this.isPasswdHide = !this.isPasswdHide;
                 if (this.isPasswdHide == true){
-                    this.hideImgSrc = "icon-test.png";
+                    this.hideImgSrc = "../../assets/image/icon-test.png";
                 } else {
-                    this.hideImgSrc = "icon-test-3.png";
+                    this.hideImgSrc = "../../assets/image/icon-test-3.png";
                 }
             },
         }
