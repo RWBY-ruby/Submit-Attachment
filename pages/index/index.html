@@ -49,7 +49,7 @@
 		<div id="login" v-if="isHideLogin==1">
 			<div id="loginBox">
 				<div id="logoImg">
-					<div id="cancel"><a href="javascript:void(0)">×</a></div>
+					<div id="cancel"><a href="javascript:void(0)" @click="doHideLogin()">×</a></div>
 					<img src="../../assets/image/软工平台.png" />
 				</div>
 				<div id="loginType">
